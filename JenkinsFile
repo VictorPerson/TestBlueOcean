@@ -1,0 +1,19 @@
+pipeline {
+    
+   agent any
+   
+   stages {
+       
+        stage('Declarative : Install') {
+            steps {
+                echo "Install ..."
+            }
+        }
+    }
+    
+    post { 
+        always { 
+            deleteDir()
+        }
+    }
+}
